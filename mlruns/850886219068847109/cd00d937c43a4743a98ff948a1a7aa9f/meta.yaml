@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/minh/telco-churn-prediction/mlruns/850886219068847109/cd00d937c43a4743a98ff948a1a7aa9f/artifacts
+end_time: 1780513518388
+entry_point_name: ''
+experiment_id: '850886219068847109'
+lifecycle_stage: active
+run_id: cd00d937c43a4743a98ff948a1a7aa9f
+run_name: rumbling-shark-988
+run_uuid: cd00d937c43a4743a98ff948a1a7aa9f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780513516718
+status: 3
+tags: []
+user_id: minh

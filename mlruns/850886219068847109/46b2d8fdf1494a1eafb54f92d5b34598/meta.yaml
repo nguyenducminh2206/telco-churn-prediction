@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/minh/telco-churn-prediction/mlruns/850886219068847109/46b2d8fdf1494a1eafb54f92d5b34598/artifacts
+end_time: 1780513446343
+entry_point_name: ''
+experiment_id: '850886219068847109'
+lifecycle_stage: active
+run_id: 46b2d8fdf1494a1eafb54f92d5b34598
+run_name: glamorous-mole-501
+run_uuid: 46b2d8fdf1494a1eafb54f92d5b34598
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780513444677
+status: 3
+tags: []
+user_id: minh
