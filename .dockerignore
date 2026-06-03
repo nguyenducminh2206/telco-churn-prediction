@@ -1,0 +1,21 @@
+# keep the build context small + the image lean
+.venv/
+.git/
+.github/
+.DS_Store
+**/__pycache__/
+**/*.pyc
+
+# data + notebooks stay on your machine
+data/
+notebooks/
+# note: mlruns/ is NOT ignored — the Dockerfile copies one model run from it.
+
+# leftover artifacts directories not needed at runtime
+docker/
+tests/
+scripts/
+
+# editor / OS
+.vscode/
+.idea/
