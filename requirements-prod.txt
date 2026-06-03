@@ -1,0 +1,8 @@
+# Runtime-only dependencies for the Docker image.
+# Dev tools (jupyter, optuna, great_expectations, etc.) live in requirements.txt.
+mlflow==2.14.1
+xgboost==3.0.3
+scikit-learn==1.5.2
+pandas==2.1.4
+numpy==1.26.4
+gradio==6.16.0
