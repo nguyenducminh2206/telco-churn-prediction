@@ -2,7 +2,7 @@ import pandas as pd
 
 def preprocess_data(df: pd.DataFrame, target_col: str="Churn") -> pd.DataFrame:
     """
-    cleaning telco churn data
+    Cleaning telco churn data
     - trim column names
     - drop ID col
     - coerce TotalCharge
