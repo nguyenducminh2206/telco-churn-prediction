@@ -1,4 +1,5 @@
 import great_expectations as ge
+import pandas as pd
 from typing import Tuple, List
 
 
@@ -17,6 +18,12 @@ def validate_telco_data(df) -> Tuple[bool, List[str]]:
     print(sep)
     print(f"  input shape       : {df.shape[0]} rows x {df.shape[1]} cols")
     print(sep)
+
+    # raw Telco CSV stores TotalCharges as string with whitespace for new customers;
+    # coerce to numeric so the numeric-range expectations can compare it
+    df = df.copy()
+    if "TotalCharges" in df.columns and df["TotalCharges"].dtype == "object":
+        df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors="coerce")
 
     ge_df = ge.dataset.PandasDataset(df)
 
