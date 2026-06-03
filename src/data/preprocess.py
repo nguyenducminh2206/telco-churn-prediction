@@ -17,9 +17,10 @@ def preprocess_data(df: pd.DataFrame, target_col: str="Churn") -> pd.DataFrame:
         if col in df.columns:
             df = df.drop(columns=[col])
 
-    # binary encode the target if it's Yes/No
-    if target_col in df.columns and df[target_col].dtype == 'object':
-        df[target_col] = df[target_col].str.strip().map({"No": 0, "Yes": 1})
+    # binary encode the target if it's Yes/No (works for both pandas 2.x object
+    # dtype and pandas 3.x str dtype)
+    if target_col in df.columns and not pd.api.types.is_numeric_dtype(df[target_col]):
+        df[target_col] = df[target_col].astype(str).str.strip().map({"No": 0, "Yes": 1})
 
     # coerce the TotalCharge to float
     if "TotalCharges" in df.columns:

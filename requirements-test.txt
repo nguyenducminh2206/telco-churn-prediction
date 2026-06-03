@@ -1,0 +1,6 @@
+# Just enough to run the unit tests in tests/.
+# Heavier deps (mlflow, xgboost, gradio) only kick in for inference/app tests,
+# which we keep out of CI for now.
+pandas
+numpy<2
+pytest
